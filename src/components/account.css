@@ -1,0 +1,92 @@
+.booking-login-header-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 30%;
+  max-width: 350px;
+  min-width: 200px;
+  height: 100px;
+  background-color: #EBEBEB;
+  margin-top: 10px;
+  text-align: center;
+  padding: 10px;
+}
+
+.booking-login-header {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  margin-top: 50px;
+  margin-bottom: 100px
+}
+
+.booking-login-subtext {
+  color: #494949;
+  font-size: 13px;
+}
+
+.booking-login-maintext {
+  color: #494949;
+  font-size: 16px;
+}
+
+.booking-login-selected {
+  color: white;
+  background-color: #036267;
+}
+
+.booking-login-selected p {
+  color: white;
+}
+
+.register-form {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.register-form input {
+  margin: 0 auto;
+  margin-top: 5px;
+  margin-bottom: 25px;
+  width: 80%;
+  max-width: 500px;
+  padding: 5px;
+  text-align: center;
+}
+
+.register-form button {
+  margin-top: 25px;
+  width: fit-content;
+  padding: 5px;
+  margin: 0 auto;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.login-form input {
+  margin: 0 auto;
+  margin-top: 5px;
+  margin-bottom: 25px;
+  width: 80%;
+  max-width: 500px;
+  padding: 5px;
+  text-align: center;
+}
+
+.login-form button {
+  margin-top: 25px;
+  width: fit-content;
+  padding: 5px;
+  margin: 0 auto;
+}
+
+.account-error-message {
+  margin-top: 25px;
+}
