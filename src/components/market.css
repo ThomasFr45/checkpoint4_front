@@ -1,10 +1,20 @@
+.market-card-container {
+  display: flex;
+  width: 80%;
+  max-width: 900px;
+  margin: 0 auto;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
 .market-card {
-  background-color: white;
+  background-color: #08ad97;
+  padding:10px;
   width: 250px;
   height: 300px;
-  margin: 0 auto;
   margin-bottom: 50px;
   color: rgb(66, 66, 66);
+  margin-right: 10px;
 }
 
 .market-card-image {

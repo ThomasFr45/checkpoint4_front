@@ -8,10 +8,11 @@ import Details from "./components/Details";
 import Account from "./components/Account";
 import MyContext from "./context/MyContext";
 import { useState } from "react";
+import Cart from "./components/Cart";
 
 function App() {
   const [user, setUser] = useState([]);
-  const [cartContent, setCartContent] = useState([]);
+  const [cartContent, setCartContent] = useState(localStorage.getItem('cartContent') ? localStorage.getItem('cartContent') : '');
   return (
     <div className="App">
       <MyContext.Provider
@@ -30,6 +31,7 @@ function App() {
           <Route path="/infos" element={<Home />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/account" element={<Account />} />
+          <Route path="/cart" element={<Cart />} />
           <Route exact path="/details/:id" element={<Details />} />
         </Routes>
       </BrowserRouter>
