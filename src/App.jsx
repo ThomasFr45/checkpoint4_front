@@ -9,6 +9,12 @@ import Account from "./components/Account";
 import MyContext from "./context/MyContext";
 import { useState } from "react";
 import Cart from "./components/Cart";
+import Infos from "./components/Infos";
+import Halfkins from "./components/Halfkins";
+import Humans from "./components/Humans";
+import Zumis from "./components/Zumi";
+import Anurans from "./components/Anurans";
+import Ursuns from "./components/Ursuns";
 
 function App() {
   const [user, setUser] = useState([]);
@@ -28,11 +34,16 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/market" element={<Market />} />
-          <Route path="/infos" element={<Home />} />
+          <Route path="/infos" element={<Infos />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/account" element={<Account />} />
           <Route path="/cart" element={<Cart />} />
           <Route exact path="/details/:id" element={<Details />} />
+          <Route path="/infos/halfkins" element={<Halfkins />}/>
+          <Route path="/infos/humans" element={<Humans />}/>
+          <Route path="/infos/zumis" element={<Zumis />}/>
+          <Route path="/infos/anurans" element={<Anurans />}/>
+          <Route path="/infos/ursuns" element={<Ursuns />}/>
         </Routes>
       </BrowserRouter>
       </MyContext.Provider>

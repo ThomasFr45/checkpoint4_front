@@ -1,0 +1,29 @@
+.infos-image {
+  width: 200px;
+  margin-right: 50px;
+}
+
+.tools-table {
+  background-color: #062b4e;
+  width: fit-content;
+  margin: 0 auto;
+  margin-top: 50px;
+  padding: 20px;
+  border-spacing: 0;
+}
+
+tr:nth-child(even) {
+  background-color: #094277;
+}
+
+.info-race-container {
+  display: flex;
+  width: 800px;
+  margin: 0 auto;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.infos-button-container {
+  margin-top: 20px;
+}

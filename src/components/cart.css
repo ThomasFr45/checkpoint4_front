@@ -22,14 +22,19 @@
 
 .cart-recap-card-image {
   width: 175px;
-  height: 175px;
+  height: 125px;
   margin-right: 45px;
+}
+
+.cart-recap-card-image:hover {
+  width:300px;
+  height: 200px;;
 }
 
 .cart-recap-remove {
   position: relative;
-  top: -125px;
-  left: 130px;
+  top: -115px;
+  left: 145px;
   width: fit-content;
 }
 

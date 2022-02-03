@@ -1,0 +1,27 @@
+.racial-item-container {
+  background-color: #073057;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 300px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
+
+.racial-item-header {
+  display: flex;
+  width: 300px;
+  margin: 0 auto;
+  margin-top: 50px;
+  margin-bottom: 20px;
+  justify-content: space-between;
+  padding-left: 20px;
+  padding-right: 90px;
+}
+
+.racial-image {
+  width: 200px;
+  height: 200px;
+  margin-top: 20px;
+  border-radius: 100px;
+}
