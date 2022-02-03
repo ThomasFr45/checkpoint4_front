@@ -40,6 +40,24 @@
 }
 
 .message {
-  height: 100px;
+  height: 95px;
   width: 100%;
+}
+
+.text-alpaca {
+  position:relative;
+  top: -154px;
+  width: 383px;
+  height: 50px;
+  left: 199px
+}
+
+.button-alpaca {
+  position: relative;
+  top: -96px;
+  left: 158px;
+  width: 89px;
+  height: 28px;
+  border:none;
+  background: transparent;
 }

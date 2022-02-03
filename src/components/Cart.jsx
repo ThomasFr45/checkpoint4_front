@@ -4,14 +4,8 @@ import { ImBin } from "react-icons/im";
 import "./cart.css";
 import axios from "axios";
 
-const validateOrder = (username, content, total, id) => {
-  if (username === '') return null;
-  axios.post('http://localhost:5000/order', { buyer: username, content: content, total: total, user_id : id})
-  console.log(username, content, total, id)
-}
-
 const Cart = () => {
-  const [username, setUsername] = useState('');
+  const [username, setUsername] = useState("");
   const { cartContent, setCartContent, user } = useContext(MyContext);
   let total = 0;
   for (let i = 0; i < cartContent.split("£").length; i++) {
@@ -24,13 +18,32 @@ const Cart = () => {
     setCartContent(filtered.join("£"));
   };
 
+  const validateOrder = async (username, content, total) => {
+    if (!user?.username) {
+      if (username === "") return null;
+      console.log("here")
+      await axios.post("http://localhost:5000/order", {
+        buyer: username,
+        content: content,
+        total: total,
+      });
+      localStorage.removeItem("cartContent");
+      setCartContent("");
+    } else {
+      await axios.post("http://localhost:5000/order", {
+        buyer: user.username,
+        content: content,
+        total: total,
+        user_id: user.id,
+      });
+      localStorage.removeItem("cartContent");
+      setCartContent("");
+    }
+  };
+
   return (
     <>
-      {!cartContent[0] && (
-        <h4 className="cart-nothing">
-          Nothing to see here
-        </h4>
-      )}
+      {!cartContent[0] && <h4 className="cart-nothing">Nothing to see here</h4>}
       <div className="cart-body">
         <div className="cart-recap">
           {cartContent[0] &&
@@ -72,8 +85,20 @@ const Cart = () => {
           <div className="cart-total">
             <h3>TOTAL</h3>
             <h4>{total} GOLDS</h4>
-            <input required value={username} onChange={(e) => setUsername(e.target.value)} placeholder="In game name" className={user?.username ? 'hidden' : 'cart-total-input'}/>
-            <button onClick={() => validateOrder(username, cartContent, total, user?.id)}>Confirm Order</button>
+            <input
+              required
+              value={username}
+              onChange={(e) => setUsername(e.target.value)}
+              placeholder="In game name"
+              className={localStorage.getItem('token') ? "hidden" : "cart-total-input"}
+            />
+            <button
+              onClick={() =>
+                validateOrder(username, cartContent, total)
+              }
+            >
+              Confirm Order
+            </button>
           </div>
         )}
       </div>

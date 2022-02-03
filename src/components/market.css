@@ -15,12 +15,14 @@
   margin-bottom: 50px;
   color: rgb(66, 66, 66);
   margin-right: 10px;
+  border-radius: 10px;
 }
 
 .market-card-image {
   width: 100%;
   height: 50%;
   margin-bottom: 25px;;
+  border-radius: 5px;
 }
 
 .market-card-buttons {
@@ -29,4 +31,32 @@
   width:150px;
   margin: 0 auto;
   margin-top: 30px;
+}
+
+.market-card-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 6px 14px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Roboto', sans-serif;
+  border-radius: 6px;
+  border: none;
+  color: #fff;
+  background: linear-gradient(180deg, #14448b 0%, #719be9 100%);
+   background-origin: border-box;
+  box-shadow: 1px 1px 1.5px rgba(0, 0, 0, 0.603), inset 0px 0.8px 0px -0.25px rgba(255, 255, 255, 0.2);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.market-card-button:focus {
+  box-shadow: inset 0px 0.8px 0px -0.25px rgba(255, 255, 255, 0.2), 0px 0.5px 1.5px rgba(54, 122, 246, 0.25), 0px 0px 0px 3.5px rgba(58, 108, 217, 0.5);
+  outline: 0;
+}
+
+.market-card-button:hover {
+  position:relative;
+  top: -2px;
+  cursor: pointer;
 }

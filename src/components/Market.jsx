@@ -12,8 +12,6 @@ const Market = () => {
     getFromDb('item', setItems);
     setReady(true);
   }, []);
-
-  console.log(cartContent)
   
   const handleCartAdd = (name, price, image, amount) => {
     if (isNaN(amount)) {
@@ -48,8 +46,8 @@ const Market = () => {
         <img src={item.image} alt={item.name} className="market-card-image" />
         <h4>{item.name}</h4>
         <p>{item.price} g / ea</p>
-        <div className="market-card-buttons"><Link to={`/details/${item.id}`}><button>Infos</button></Link>
-        <button onClick={() => handleCartAdd(item.name, item.price, item.image, prompt('How many do you want to buy ?'))}>Order</button></div>
+        <div className="market-card-buttons"><Link to={`/details/${item.id}`}><button className="market-card-button">Infos</button></Link>
+        <button className="market-card-button" onClick={() => handleCartAdd(item.name, item.price, item.image, prompt('How many do you want to buy ?'))}>Order</button></div>
       </div>))}</div>
   );
 }

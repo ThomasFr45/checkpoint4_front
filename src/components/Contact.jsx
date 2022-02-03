@@ -1,20 +1,31 @@
-import emailjs from 'emailjs-com';
-import './contact.css';
+import emailjs from "emailjs-com";
+import "./contact.css";
 
 const Contact = () => {
   const sendEmail = (e) => {
     e.preventDefault();
 
     emailjs.sendForm(
-      'service_36gcnif',
-      'template_nr41828',
+      "service_36gcnif",
+      "template_nr41828",
       e.target,
-      'user_NbSdt57RRlrN8ZTmba5lb'
+      "user_NbSdt57RRlrN8ZTmba5lb"
     );
-    alert('Thank you, for your message ! ');
+    alert("Thank you, for your message ! ");
     e.target.reset();
   };
   return (
+    <div className="divContact">
+      <form onSubmit={sendEmail}>
+        <img src="https://i.imgur.com/mbLrCi1.png" alt="" />
+        <div className="text-alpaca">
+          <textarea className="message" name="message"></textarea>
+        </div>
+        <button className="button-alpaca"></button>
+      </form>
+    </div>
+  );
+  /*return (
     <div className="divContact">
       <form onSubmit={sendEmail}>
         <div className="divInput">
@@ -48,7 +59,7 @@ const Contact = () => {
         </div>
       </form>
     </div>
-  );
+  );*/
 };
 
 export default Contact;
